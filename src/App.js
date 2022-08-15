@@ -6,7 +6,7 @@ function App() {
     <div>
       <Nav />
       <h2 className="text-3xl w-full text-center bg-gray-200 text-gray-700 p-8">
-        Ejercicio con React
+        Ejercicios con React
       </h2>
       <CrudApp />
     </div>
