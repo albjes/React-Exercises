@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Seiya",
-      "constellation": "Pegaso"
+      "constellation": "Pegaso1"
     },
     {
       "id": 2,
@@ -21,9 +21,9 @@
       "constellation": "Andrómeda"
     },
     {
-      "id": 5,
       "name": "Ikki",
-      "constellation": "Fénix"
+      "constellation": "Fénix",
+      "id": 1660649353020
     }
   ]
 }

@@ -20,13 +20,7 @@ export const CrudTable = ({ data, setDataToEdit, deleteData }) => {
           </tr>
         </thead>
         <tbody>
-          {data.length === 0 ? (
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <td colSpan="3" className="py-4 px-6">
-                Sin datos
-              </td>
-            </tr>
-          ) : (
+          {data.length > 0 ? (
             data.map((el) => (
               <CrudTableRow
                 key={el.id}
@@ -35,6 +29,12 @@ export const CrudTable = ({ data, setDataToEdit, deleteData }) => {
                 deleteData={deleteData}
               />
             ))
+          ) : (
+            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <td colSpan="3" className="py-4 px-6">
+                Sin datos
+              </td>
+            </tr>
           )}
         </tbody>
       </table>
