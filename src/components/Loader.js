@@ -8,7 +8,6 @@ export const Loader = () => {
       <h3 className="text-center mb-8 text-xl">
         <div className="lds-hourglass"></div>
       </h3>
-      ;
     </div>
   );
 };
