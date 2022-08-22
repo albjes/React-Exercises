@@ -91,33 +91,28 @@ export const CrudApi = () => {
   };
 
   return (
-    <div className="mt-8 mb-8 border-b-gray-800 border-b-8">
-      <h2 className="bg-gray-800 text-white text-xl p-4 text-center">
-        CRUD API JSON SERVER
-      </h2>
-      <div className="lg:flex lg:justify-center">
-        <CrudForm
-          createData={createData}
-          updateData={updateData}
-          dataToEdit={dataToEdit}
-          setDataToEdit={setDataToEdit}
+    <>
+      <CrudForm
+        createData={createData}
+        updateData={updateData}
+        dataToEdit={dataToEdit}
+        setDataToEdit={setDataToEdit}
+      />
+      {loading && <Loader />}
+      {error && (
+        <Message
+          msg={`Error ${error.status}: ${error.statusText}`}
+          bgColor="text-red-800"
         />
-        {loading && <Loader />}
-        {error && (
-          <Message
-            msg={`Error ${error.status}: ${error.statusText}`}
-            bgColor="text-red-800"
-          />
-        )}
-        {db && (
-          <CrudTable
-            data={db}
-            setDataToEdit={setDataToEdit}
-            deleteData={deleteData}
-          />
-        )}
-      </div>
-    </div>
+      )}
+      {db && (
+        <CrudTable
+          data={db}
+          setDataToEdit={setDataToEdit}
+          deleteData={deleteData}
+        />
+      )}
+    </>
   );
 };
 
